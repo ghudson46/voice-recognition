@@ -1,0 +1,34 @@
+* {
+  font-family: 'Roboto Mono', monospace;
+  color: greenyellow;
+  background-color: #000;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  top: 200px;
+}
+
+.content {
+  text-align: center;
+}
+
+.talk {
+  color: #000;
+  background-color: greenyellow;
+  width: 120px;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 2px;
+  position: relative;
+  left: calc(50% - 60px);
+}
+
+.talk:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
