@@ -1,7 +1,6 @@
 const btn = document.querySelector('.talk');
 const content = document.querySelector('.content');
 
-try{
 
 const greetings = ["Don't talk to me loser", "Wouldn't you like to know!", "I'm doing about as well as an artificially intelligent friend, designed by an idiot, can do", "I don't have to listen to you", "hahaha you're such a jabroni!"];
 
@@ -32,16 +31,12 @@ btn.addEventListener("click", () => {
 const readOutLoud = (message) => {
   const speech = new SpeechSynthesisUtterance();
 
-  speech.text =  "I'm sorry. My programmer is not very smart and does not know how to teach me to respond to that. Blame Garrett for my inadequacy";
+  speech.text = 'I dont know what you said?'
 
-  if(message.includes('How are you' || 'Hey' || 'Whats up?' || 'Hello' || 'Hi' || 'Whats going on?')) {
-    let finalText = greetings[Math.floor(Math.random() * greetings.length)];
+  if (message.includes('how are you')) {
+    const finalText = greetings[Math.floor(Math.random() * greetings.length)];
     speech.text = finalText;
-  } else if (message.includes('How is the weather' || 'What is the weather outside?' || 'Weather' || 'What is the temperature outside?' || 'is it raining?')) {
-    let finalText = weather[Math.floor(Math.random() * weather.length)];
-    speech.text = finalText;
-  }
-
+  } 
 
   speech.pitch = 1;
   speech.volume = 1;
@@ -50,8 +45,3 @@ const readOutLoud = (message) => {
   window.speechSynthesis.speak(speech);
 }
 
-
-
-}catch(e){
-  alert(e);
-}
